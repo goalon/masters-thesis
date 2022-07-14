@@ -1,0 +1,80 @@
+%
+% Niniejszy plik stanowi przykład formatowania pracy magisterskiej na
+% Wydziale MIM UW.  Szkielet użytych poleceń można wykorzystywać do
+% woli, np. formatujac wlasna prace.
+%
+% Zawartosc merytoryczna stanowi oryginalnosiagniecie
+% naukowosciowe Marcina Wolinskiego.  Wszelkie prawa zastrzeżone.
+%
+% Copyright (c) 2001 by Marcin Woliński <M.Wolinski@gust.org.pl>
+% Poprawki spowodowane zmianami przepisów - Marcin Szczuka, 1.10.2004
+% Poprawki spowodowane zmianami przepisow i ujednolicenie 
+% - Seweryn Karłowicz, 05.05.2006
+% Dodanie wielu autorów i tłumaczenia na angielski - Kuba Pochrybniak, 29.11.2016
+
+\documentclass[en]{pracamgr}
+
+\autor{Mateusz Bajorek}{385122}
+
+\title{Analysis and visualization of programmers’ activities during their workday}
+\titlepl{Analiza i wizualizacja aktywności programistów w ramach ich dnia pracy}
+
+\kierunek{Computer Science}
+
+% Praca wykonana pod kierunkiem:
+% (podać tytuł/stopień imię i nazwisko opiekuna
+% Instytut
+% ew. Wydział ew. Uczelnia (jeżeli nie MIM UW))
+\opiekun{dr Robert Dąbrowski\\
+  Institute of Informatics\\
+  }
+
+% miesiąc i~rok:
+\date{September 2022}
+
+%Podać dziedzinę wg klasyfikacji Socrates-Erasmus:
+\dziedzina{11.3 Informatics, Computer Science}
+
+%Klasyfikacja tematyczna wedlug AMS (matematyka) lub ACM (informatyka)
+\klasyfikacja{D. Software}
+
+% Słowa kluczowe:
+\keywords{keystrokes dynamics}
+
+% Used Latex packages
+\usepackage{hyperref}
+\usepackage{xcolor} % TODO TEMP!!!
+
+% Tu jest dobre miejsce na Twoje własne makra i~środowiska:
+\newtheorem{definition}{Definition}[section]
+
+% koniec definicji
+
+\begin{document}
+\maketitle
+
+\include{chapters/abstract}
+\include{chapters/acknowledgements}
+
+\tableofcontents
+
+\include{chapters/intro}
+\include{chapters/background}
+\include{chapters/methodology}
+\include{chapters/results}
+\include{chapters/discussion}
+\include{chapters/conclusions}
+\include{chapters/availability}
+
+\appendix
+
+\include{chapters/bibliography}
+
+\end{document}
+
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% coding: latin-2
+%%% End:
