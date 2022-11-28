@@ -1,0 +1,7 @@
+\section{Premise}
+
+I utilize the 30 seconds long intervals in order to simultaneously provide dense enough granularity and prevent user identification which may happen if intervals were too short. According to the article by Leinonen et. al. \cite{Lei17PreventIdentification} the identification stops being feasible when keystrokes are segregated into buckets of around 300 milliseconds (and more). My buckets (intervals) are much bigger and I do not save information about concrete keys pressed - I store only cumulative data (mainly added and deleting chars) within the given time-frame. Thus, I am convinced that this data is not straight-forwardly identifiable.
+
+The data gathered in this way should give some insights into possible relations between programmers' activity (measured in chars added/deleted), used languages and the number of projects simultaneously worked on.
+
+The user interface (UI), simply called the dashboard, is built with the research participants in mind. The purpose of the visualizations and the controls, that the dashboard provides, is to make the users more comfortable with the tool, to enhance trust in it and to potentially encourage them to use it regularly.

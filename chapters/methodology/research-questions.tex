@@ -1,0 +1,27 @@
+\section{Research questions}
+
+\subsection{What are the activity patters of programmers during the day?}
+
+I examine if the programmers of different languages remain active during the day and night. It is achieved by analyzing data points with regards to their timestamps and programming languages used. Additionally, I compute the performance metric measured by the average number of actions per data point to hypothesize about performance fluctuations with regards to moving time. This statistic also takes into account the programming language to search for potential divergence in activity patters between people using different languages.
+
+\subsection{How do programmers take breaks during the day?}
+
+Programmers need breaks between coding to read the code, study documentation, complete various professional tasks or just to have lunch. To analyze these breaks, I compute the lengths of all the recorded spaces between data points within a day (omitting the breaks taken between different days). This way it becomes possible to bin the data about breaks and compose a histogram to observe the frequency of shorter and longer breaks for programmers. Again, the programming language is also taken into account here.
+
+\subsection{What are the proportions of code added to code deleted?}
+
+Programmers during coding may not only add the new code, but also delete the old one and replace it. I study the characteristics of this behavior by analyzing the ratio of the number of deletions to the number of additions. Small values of this ratio (below 100\%) indicate the increase in the code base, while higher values (over 100\%) point to the code being mostly removed. The ratio is calculated separately per data point and per day to find out if the statistical trends hold under diverse granularity levels. Similar check is done on the basis of the difference in the programming language used.
+
+\subsection{How many projects do programmers work on?}
+
+It is quite common for programmers to work on multiple projects in parallel especially since they may constitute the basis of a larger venture. I examine what is the usual number of projects that the programmers work on during the day and overall. Additionally, I check how frequent it is to switch between different projects within one day.
+
+% \subsection{How many languages do programmers use?}
+
+% I can see if the programmers work on many languages and what configurations.
+
+\subsection{How does the data change in relation to the day of the week?}
+
+It is expected that programmers' activity decreases on the weekend. I validate these claims by comparing the number of data points and actions generated in distinct days of the week. Performance (measured as the average number of actions per data point) is also calculated with this regard to search for potential disparity in programmers' performance between weekdays and the weekend days.
+
+% I will do that by searching for time periods of particularly increased or decreased activity. I will observe that frequency of extreme points (especially peaks) in the plots. This way I can make hypotheses about the actual real actions of programmers. For instance in the Version Control systems merging code may result in high numbers of additions or deletions. Such suspicious peaks of activity may provide evidence to particular actions.

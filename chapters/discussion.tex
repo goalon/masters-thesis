@@ -1,5 +1,33 @@
 \chapter{Discussion}\label{ch:discussion}
 
-% These are not really real sections
-\section{Discovered connotations}
+\section{Revisiting results}
+
+Analysis of the data gathered by the \texttt{MIMUW-MB-TT} plugin sheds some light onto the characteristics of programmers' working day.
+
+Activity analysis shows that understandably most of the work concentrates in the afternoon, but with a notable portion of it done in the evening. Similar patterns emerge when analysing the data from programmers of Python and JS/TS separately. Nevertheless, no sound evidence towards difference of chronotypes between programmers of different languages were discovered.
+
+Breaks analysis unsurprisingly concludes that longer breaks are less frequent that shorter ones and this observation holds for different programming languages and overall. The reason why middle length breaks are more frequent than the shortest ones may just be related to the method of measurement with a break considered as a time space between two data points. Let me remind here that one data point holds information of at most 30 seconds.
+
+Deletions to additions analysis shows that it is more common to add code than to delete it and this trend stays true regardless of the programming language used.
+
+The number of projects per person is observed as at most just a few. Moreover, frequent switching between different projects was not observed.
+
+The data supports the common knowledge that activity dips on weekends. Additionally, it decreases even earlier on Friday which was observed also by Robinson \cite{Rob17LangsUsedAtNight}.
+
 \section{Threats to validity}
+
+\subsection{Doubts about data gathered}
+
+The gathered data composes of 13 packages. I assume that they come from different people, however it is possible that one person uses my plugin on separate workstations. Although the participants were instructed to use the plugin for at least two weeks, the number of downloads significantly surpass the number of data packages (a minority of them were test downloads by me) and even within the packages there are differences of size between them. Because of that, some participants may influence the final results stronger than the rest.
+
+\subsection{Questions about participants in the study}
+
+Apart from the number of participants, it is important to remember they were not chosen uniformly from the whole community of programmers. Most of them came from the MIMUW faculty as student and it may significantly incluence the final results.
+
+\subsection{\texttt{MIMUW-MB-TT} plugin shortcomings}
+
+Due to the technical obstacles, the plugin does not save the data in the file system right before closing the VS Code window. It just saves the data on 2 minutes interval, so it is possible to lose the data gathered right before closing the IDE.
+
+Additionally, there exist an exploit related to project switching. Since \texttt{workspaceNameHash} relates to the last workspace name recorded for a data point, it is theoretically possible to work within 30 second period on different projects and the system would store such an event as working on just one. This would, however, involve quite a deep knowledge of the plugin and rather unnatural way of typing, so I deem the risk of this exploit influencing the gathered data as minimal.
+
+Apart from that, the plugin allows a situation where \texttt{start} and \texttt{end} are equal for a data point. While this does not constitute a bug by itself, it creates potential confusion and inconvenience when analyzing the gathered data.

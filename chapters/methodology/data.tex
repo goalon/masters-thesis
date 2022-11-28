@@ -1,0 +1,32 @@
+\section{Data}
+
+The data is stored in the file system in the \texttt{JSON Lines} (\texttt{.jsonl}) \cite{JSONLines} format. It was popularized in recent years by OpenAI (a popular AI/ML company) in its GPT-3 API \cite{OpenAIGPT3}. Essentially files in this format are text files where each line (seperated by newline "\verb"\n"" characters) constitute a valid JSON value (that is why this format is sometimes also called \texttt{newline-delimited JSON}). In the particular case of my tool each of these JSON lines has a special designated type \ref{fig:event_type}.
+
+\begin{figure}[ht]
+    \centering
+    \input{chapters/methodology/event-type}
+    \caption{The data type}
+    \label{fig:event_type}
+\end{figure}
+
+Let me describe each of the fields of this structure:
+\begin{description}
+    \item[\texttt{additions}] say how many characters (chars) were added to the files opened in the editor within the time-frame determined by the fields \texttt{start} and \texttt{end};
+    \item[\texttt{deletions}] say analogously to the \texttt{additions} field about the deleted chars;
+    \item[\texttt{actions}] count how many actions were done on each file opened in the editor (one action may add or delete multiple chars);
+    \item[\texttt{start}] means the start of the interval during which the record of the data was gathered;
+    \item[\texttt{end}] is analogously to the \texttt{start} field the end of the interval;
+    \item[\texttt{workspaceNameHash}] is the SHA256 \cite{NIST02SHS} hash of the workspace name in VSCode. It is done to secure the privacy of the research participants in the well established way (not to leak these names), but simultaneously to still be able to differentiate between the project names. If the workspace name does not exist, the value of \texttt{workspaceNameHash} is the string literal \texttt{"null"};
+    \item[\texttt{languages}] is a dictionary that stores data separately for each (automatically recognized) programming language. It basically splits the fields \texttt{additions}, \texttt{deletions} and \texttt{actions} into contributions from each detected language.
+\end{description}
+
+% todo say that languages sums up to all additions and deletions (but not actions of course)
+
+% Look in the similar papers.
+
+% How did I encourage the people?
+
+% Metion the papers on research motivations and the paper from the girl on naming the variables
+
+% How much data was gathered?
+% openai
