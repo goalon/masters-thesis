@@ -1,19 +1,24 @@
-\chapter{Conclusions and future work}
+\chapter{Conclusions and future work}\label{ch:conclusions}
 
 \section{Answers to research questions}
 Let me sum up the conclusions according to the gathered data.
+
+I suggested 2 visualizations of programmer's working day. Both of them have the potential to assist developers with their growth and their employers with better employee evaluation and resource management. This may be especially pertinent in the present IT job market \cite{BBC22EMTwitter}.
 
 Programmers work mostly during standard work hours with smaller portions of it done during the late evening. Differences in chronotypes between programmers of Python and JS/TS remain inconclusive.
 
 Shorter breaks are much more frequent than longer ones, however the ones of length around 30 seconds are the most frequent and not the shortest ones. This may be due to the way how the plugin is constructed or really there is something tangible here about programmers' behavior.
 
-During the span of the study, participants were observed to work only on a handful of distinct projects.
+Analysis of the ratio of deletions to additions show that programmers on average more often add code than delete it. It may be an indicator of the further growth of existing codebases or the constant creation of new ones.
+
+During the span of the study, participants were observed to work only on a handful of distinct projects. This observation is especially relevant during the current trend of overemployment \cite{Luf21BBCOveremployment} that is working multiple jobs concurrently at the same time \cite{Hie22Overemployment}.
 
 Differences in activity per days of the week are most visible when comparing normal weekdays with the weekend when the activity significantly drops. Performance calculations did not give conclusive insights into potential differences in performance between different days of the week.
 
 \section{Key contributions}
 
 \begin{itemize}
+    \item Simple visualizations of programmer's working day.
     \item Published open-source plugin to gather the programmers' data.
     \item Published open-source code to analyze the gathered programmers' data.
     \item Insights into the programming process of programmers regarding multiple variables.
@@ -23,8 +28,8 @@ Differences in activity per days of the week are most visible when comparing nor
 
 The analysis and visualization of programming process is an extensive field of study. Because of that, it is possible to extend my study in many ways. Below I present my suggestions.
 
-Gathering more data is an obvious choice for future work. That would make the results more believable and non-attributable as just some sort of a fluke. It would be important to check the programmers background to prepare a statistically appropriate group of study participants.
+Gathering more data is an obvious choice for future work. That would make the results more believable and non-attributable as just some sort of a fluke. It would be important to check the programmers background to prepare a statistically appropriate group of study participants. To accomplish this, a more sophisticated rewarding scheme may be needed e.g. like the one from the DARPA Red Balloon Challenge \cite{Tan11DARPABallons}.
 
-Extending the capabilities of the \texttt{MIMUW-MB-TT} plugin also seems like a straight-forward idea. Labeling the events as concrete programmers' actions (like switching a git branch) would require much more involvement from the participants (by requiring them to annotate the data points), but again would contribute to making the study more serious.
+Extending the capabilities of the \texttt{MIMUW-MB-TT} plugin also seems like a straight-forward idea. Labeling the events as concrete programmers' actions (like switching a git branch) would require much more involvement from the participants (by requiring them to annotate the data points), but again would contribute to making the study more serious. Publishing the gathered data is also a necessary step in this direction that may be achieved by implementing privacy-preserving data collection \cite{Cao20PrivacyCol}. All these improvements could potentially give the \texttt{MIMUW-MB-TT} plugin a chance to be as influential as some similar tools integrated with IDEs other than VS Code \cite{Ama16FeedBaG, Yoon11Fluorite, Min13DFlow}.
 
-Multiple hypotheses may be constructed from my thesis. One of them that intrigues me is that in the figure \ref{fig:del_to_add} the ratio of deletions to additions seem to potentially be invariant to differences in data granularity. It may be interesting to challenge this claim.
+Multiple hypotheses may be constructed from my thesis. One of them that intrigues me is that in the figure \ref{fig:del_to_add} the presented ratios of deletions to additions seem to potentially be invariant to differences in data granularity. It may be interesting to challenge this claim.

@@ -1,6 +1,6 @@
 \section{Activity}
 
-On the figure \ref{fig:activity_by_hour}, the activity of programmers by hour is presented. It is measured in two ways: by counting the data points generated in distinct hours, and by summing the actions within these data points. In both cases the \texttt{start} timestamp determines the hour bucket where a data point or an action falls under. On the graph it is clearly observed in both of the measurement ways that most of the activity happens in the afternoon and that the work almost completely ceases in the middle of the night and around dawn.
+On the figure \ref{fig:activity_by_hour}, the activity of programmers by hour is presented. It is measured in two ways: by counting the data points generated in distinct hours, and by summing the actions within these data points. I remind that \texttt{actions} is an attribute of a data point \ref{sec:data_description} and here I sum these attributes of multiple data points. In both cases of measurement the \texttt{start} timestamp determines the hour bucket where a data point or an action falls under. Timezone from the timestamps is ignored here and in analogous graphs later. Thus, for instance, two programmers working at 10:00 in Warsaw and at 10:00 in San Francisco on the same day would contribute to the same hour bucket. On the graph it is clearly observed in both of the measurement ways that most of the activity happens in the afternoon and that the work almost completely ceases in the middle of the night and around dawn.
 
 \begin{figure}[htbp]
   \centering
@@ -18,7 +18,7 @@ Similar observations can be made by examining the activity graph with respect to
   \label{fig:activity_by_hour_langs}
 \end{figure}
 
-When it comes to performance measured as the average number of actions per data point, it remains relatively stable \ref{fig:performance_by_hour}. Further inspection of the graph shows though that the performance generally decreases at night.
+When it comes to performance measured as the average number of actions per data point, it remains relatively stable \ref{fig:performance_by_hour} with visible dips around the end of the standard working day (i.e. between 4 and 6 pm) and at night. Perceived anomalous surges during that period (i.e. at 12 and 5 am) occurred arguably due to smaller samples of data gathered at those time slots.
 
 \begin{figure}[htbp]
   \centering

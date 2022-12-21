@@ -13,7 +13,6 @@ Circadian rhythms enable humans to follow day cycles. It is an important concept
 \end{definition}
 
 The theory of individual's chronotype is a major reason why some developers exhibit greater activity during earlier parts of the day while the others during the later ones. Such a phenomenon occurs obviously within the confines of social norms. Programmers of late chronotypes (the so-called "night owls") are subject to the same common working hours as the ones of early chronotypes (the so-called "morning larks"). Thus, the true extent of individual's chronotype can be further studied by analyzing weekend activity or volunteer work on open-source projects (which may, in fact, still be influenced by external factors). Nevertheless, chronotypes remain a vital factor in determining programmers productivity peaks and slumps which are in the focus of my thesis.
-% \textcolor{red}{TODO! REF}
 
 \begin{definition}
 \emph{Time tracking} refers to a company policy regarding logging time of its employees. The reports compiled in this process present a summary of time spent on each given task by an employee. \cite{Fed21TimeTracking}
@@ -25,16 +24,15 @@ In ordinary company operations chronotypes are not a matter of general concern. 
 \emph{Keystroke dynamics} is a research area concerning the rhythm of typing. It generally involves recording person's keystrokes with their timestamps in order for the gathered data to be further analyzed. \cite{Lei19Dissertation}
 \end{definition}
 
-The domain of keystroke dynamics is imperative for examining human behaviour at a computer keyboard. Since capturing and inspecting keystrokes are my main research methods, findings pertinent to keystroke dynamics provide an indispensable help in my thesis.
+The domain of keystroke dynamics is imperative for examining human behaviour at a computer keyboard. It can be utilized to study a wide array of subjects including user authentication \cite{Lei17PreventIdentification} and programming performance \cite{Tho05Performance, Lei16Performance}. Since capturing and inspecting keystrokes are my main research methods, findings pertinent to keystroke dynamics provide an indispensable help in my thesis.
 
 \begin{definition}\label{def:programming_process}
 \emph{Programming process} relates to the way how a particular programmer develops a given piece of software. This process can be observed by tracking the programmer's actions linked to typing the source code on a keyboard. \cite{Mat13PPV}
 \end{definition}
 
-% \textcolor{red}{TODO! weird!}
 Tracing programming process through the means of keystrokes capturing is my main objective. It is potentially a great observation point for chronotypes. It is also a point of concern for time tracking. Thus, it can be seen as a handy concept that clusters together multiple ideas mentioned earlier.
 
-\begin{definition}
+\begin{definition}\label{def:granularity}
 \emph{Granularity} of the data refers to the number of recorded data points per unit of time.
 \end{definition}
 
@@ -44,7 +42,6 @@ In short, data granularity is simply the relative density of data points. Greate
 \emph{Code snapshot} is a saved state of programmer's work at a specific point in time. It typically contains a copy of all the source code that was written until the time of capturing the snapshot. \cite{Jad06NoviceCompilationBehaviour}
 \end{definition}
 
-% \textcolor{red}{TODO! weird!}
 Storing a sequence of code snapshots gives an exceptional insight into the programming process. It may be of different granularities with keystroke level comprising dense data points and git commits - sparse ones. In the literature code snapshots may also relate to the gathered metadata (like timestamps of user actions). Thus, it can be said that my system in fact gathers subsequent code snapshots.
 
 My work is focused on analyzing chronotypes of different programmers and finding relations between chronotypes and various factors like programming languages used. The chronotypes may exhibit different characteristics like the frequency and length of breaks, or amplitude of activity peaks. Apart from the chronotypes, I am interested in the particular actions themselves, especially the difference in deletes and additions. To see if there is some kind of variation in this regard between programmers or clusters of programmers within a given language.

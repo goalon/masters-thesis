@@ -3,9 +3,9 @@
   additions:                 INTEGER
   deletions:                 INTEGER
   actions:                   INTEGER
-  start:                     STRING      // ISO 8601 date-time format
-  end:                       STRING      // ISO 8601 date-time format
-  workspaceNameHash:         STRING      // SHA-256 string or "null"
+  start:                     STRING         // ISO 8601 date-time format
+  end:                       STRING         // ISO 8601 date-time format
+  workspaceNameHash:         STRING | NULL  // SHA-256 string or null
   languages: {               DICTIONARY
     [languageId: STRING]: {  DICTIONARY
       additions:             INTEGER
